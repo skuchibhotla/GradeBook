@@ -23,18 +23,18 @@ STATIC KEYWORD
 ---------------
 Cannot call the method via an object. 
 Ex: 
-namespace GradeBook
-{
-    Class Program
+    namespace GradeBook
     {
-        static void Main(string[] args)
+        Class Program
         {
-            var p = new Program();
-            p.Main(args);    
-            // This will not work as you cannot call Main via 'p' object.
+            static void Main(string[] args)
+            {
+                var p = new Program();
+                p.Main(args);    
+                // This will not work as you cannot call Main via 'p' object.
 
-            // Instead, do this...
-            Program.Main
+                // Instead, do this...
+                Program.Main
+            }
         }
     }
-}
